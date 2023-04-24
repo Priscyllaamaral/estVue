@@ -28,36 +28,36 @@ alguns exemplos de código usando vueJs e Vuetify
                  </tr>
              </template>
        </v-data-table>
-   </div>
+     </div>
  
  
  
  
-  new Vue({
-  el: '#app',
-  vuetify: new Vuetify(),
-  data: () => ({
-    name:"aqui",
-    cor:'red',
-    show: false,
-    h :[{title:'ID', key:'id'},{title:'Name', key:'nome'}],
-    i : [{'id':1, nome:'pri'},{'id':2, nome:'sam'},{'id':3, nome:'ger'},{'id':4, nome:'aqui'},{'id':5, nome:'gabi'}], 
-  }),
-})
+      new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+      data: () => ({
+        name:"aqui",
+        cor:'red',
+        show: false,
+        h :[{title:'ID', key:'id'},{title:'Name', key:'nome'}],
+        i : [{'id':1, nome:'pri'},{'id':2, nome:'sam'},{'id':3, nome:'ger'},{'id':4, nome:'aqui'},{'id':5, nome:'gabi'}], 
+      }),
+    })
 
 
 
 
 
 
-<v-menu>
-   <template v-slot:activator="{ on }">
-      <v-btn v-on="on"> Dropdown </v-btn>
-   </template>
-        <v-list>
-          <v-list-item v-for="index in 4" :key="index">
-            <v-list-item-title>Item {{ index }}</v-list-item-title>
-          </v-list-item>
-        </v-list>
-</v-menu>
+    <v-menu>
+       <template v-slot:activator="{ on }">
+          <v-btn v-on="on"> Dropdown </v-btn>
+       </template>
+            <v-list>
+              <v-list-item v-for="index in 4" :key="index">
+                <v-list-item-title>Item {{ index }}</v-list-item-title>
+              </v-list-item>
+            </v-list>
+    </v-menu>
 
