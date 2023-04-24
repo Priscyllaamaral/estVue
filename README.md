@@ -29,6 +29,8 @@ alguns exemplos de código usando vueJs e Vuetify
              </template>
        </v-data-table>
      </div>
+   
+   -----------
  
  
  
@@ -46,7 +48,7 @@ alguns exemplos de código usando vueJs e Vuetify
     })
 
 
-
+   -----------
 
 
 
