@@ -10,11 +10,38 @@ alguns exemplos de código usando vueJs e Vuetify
 
 
 
-
-                  <v-tooltip bottom>
-                      <template v-slot:activator="{ on }">
-                            <v-btn v-on="on"> Passar o mouse </v-btn>
-                      </template>
-                      <h1 v-bind:style="{'color': cor}"> Passou </h1> 
-                  </v-tooltip>
+    <div id=app>
+        <input v-bind:value="name"></input>
+        <v-data-table :headers="h" :items="i">
+            <template v-slot:item="{ item }">
+                <tr>
+                    <td>{{ item.id }}</td>
+                    <td> {{ item.nome }}</td>
+                    <td>
+                        <v-tooltip bottom>
+                          <template v-slot:activator="{ on, attrs }">
+                              <v-btn v-on="on"> Passar o mouse </v-btn>
+                          </template>
+                          <h1 v-bind:style="{'color': cor}" >Passou</h1>
+                        </v-tooltip>
+                    </td>
+                 </tr>
+             </template>
+       </v-data-table>
+   </div>
+ 
+ 
+ 
+ 
+  new Vue({
+  el: '#app',
+  vuetify: new Vuetify(),
+  data: () => ({
+    name:"aqui",
+    cor:'red',
+    show: false,
+    h :[{title:'ID', key:'id'},{title:'Name', key:'nome'}],
+    i : [{'id':1, nome:'pri'},{'id':2, nome:'sam'},{'id':3, nome:'ger'},{'id':4, nome:'aqui'},{'id':5, nome:'gabi'}], 
+  }),
+})
 
