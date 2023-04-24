@@ -45,3 +45,19 @@ alguns exemplos de código usando vueJs e Vuetify
   }),
 })
 
+
+
+
+
+
+<v-menu>
+   <template v-slot:activator="{ on }">
+      <v-btn v-on="on"> Dropdown </v-btn>
+   </template>
+        <v-list>
+          <v-list-item v-for="index in 4" :key="index">
+            <v-list-item-title>Item {{ index }}</v-list-item-title>
+          </v-list-item>
+        </v-list>
+</v-menu>
+
